@@ -1,6 +1,6 @@
-/*   
+/*
 Theme Name: Mule
-Theme URI: http://ccdzine.com/
+Theme URI: https://github.com/ControlledChaos/mule-theme
 Description: Designed for 3MulesMovie.com & John McDonald Productions.
 Author: Greg Sweet, Controlled Chaos Design
 Author URI: http://ccdzine.com/
@@ -367,7 +367,7 @@ body:not(.home) .nav-up {
 	transform: translate(-0.1em, -0.5em);
 	text-stroke: 0.004em #fff;
 	-webkit-text-stroke: 0.004em #fff;
-	text-shadow: 
+	text-shadow:
 		0.004em 0.004em 0px #fff,
 		0.004em -0.004em 0px #fff,
 		-0.004em 0.004em 0px #fff,
@@ -437,7 +437,7 @@ body:not(.home) .nav-up {
 	letter-spacing: 0.07em;
 	text-stroke: 0.015em #fff;
 	-webkit-text-stroke: 0.015em #fff;
-	text-shadow: 
+	text-shadow:
 		0.015em 0.015em 0px #fff,
 		0.015em -0.015em 0px #fff,
 		-0.015em 0.015em 0px #fff,
@@ -848,7 +848,7 @@ img {
 	font-size: 75%; /* alt text */
 }
 
-.size-auto, 
+.size-auto,
 .size-full,
 .size-large,
 .size-medium,
