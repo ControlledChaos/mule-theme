@@ -13,7 +13,7 @@ get_header(); ?>
 	<main class="main" role="main" itemscope itemprop="mainContentOfPage">
 
 		<header class="blog-title">
-			<h1><?php _e( 'Mule News', 'mule' ); ?></h1>
+			<h1><?php _e( 'Mule News', 'mule-theme' ); ?></h1>
 		</header>
 
 		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>

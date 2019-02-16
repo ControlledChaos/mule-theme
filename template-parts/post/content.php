@@ -27,7 +27,7 @@
 	</header>
 
 	<?php if ( is_home() ) : ?>
-		<p><small><?php comments_popup_link( __( 'Be the first to comment', 'mule' ), __( '1 Comment', 'mule' ), __( '% Comments', 'mule' ), 'comments-link', '' ); ?></small></p>
+		<p><small><?php comments_popup_link( __( 'Be the first to comment', 'mule-theme' ), __( '1 Comment', 'mule-theme' ), __( '% Comments', 'mule-theme' ), 'comments-link', '' ); ?></small></p>
 	<?php endif; ?>
 
 	<div class="entry-content" itemprop="articleBody">

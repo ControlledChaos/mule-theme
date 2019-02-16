@@ -13,7 +13,7 @@ get_header(); ?>
 	<main class="main" role="main" itemscope itemprop="mainContentOfPage">
 
 		<header class="archive-title">
-			<h1><?php _e( 'Posts Tagged "', 'mule' ) . single_tag_title() . _e( '"', 'mule'  ); ?></h1>
+			<h1><?php _e( 'Posts Tagged "', 'mule-theme' ) . single_tag_title() . _e( '"', 'mule-theme'  ); ?></h1>
 		</header>
 		
 		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>

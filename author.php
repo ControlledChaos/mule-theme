@@ -13,7 +13,7 @@ get_header(); ?>
 	<main class="main" role="main" itemscope itemprop="mainContentOfPage">
 		
 		<header class="archive-title">
-			<h1><?php echo __( 'Posts by ', 'mule' ) . '<span class="vcard author"><span class="fn">' . get_the_author() . '</span></span>'; ?></h1>
+			<h1><?php echo __( 'Posts by ', 'mule-theme' ) . '<span class="vcard author"><span class="fn">' . get_the_author() . '</span></span>'; ?></h1>
 		</header>
 
 		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>

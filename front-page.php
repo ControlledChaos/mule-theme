@@ -20,12 +20,12 @@ get_header(); ?>
 		if ( $donate_button ) {
 			$button = $donate_button;
 		} else {
-			$button = __( 'Support the Film', 'mule' );
+			$button = __( 'Support the Film', 'mule-theme' );
 		}
 		if ( $donate_message ) {
 			$message = $donate_message;
 		} else {
-			$message = __( 'Please be a part of the team that helps complete the documentary with your tax-deductible donation.', 'mule' );
+			$message = __( 'Please be a part of the team that helps complete the documentary with your tax-deductible donation.', 'mule-theme' );
 		}
 		?>
 		<h3 class="featured-video-donate"><a href="#support-front"><?php echo $button; ?></a></h3>
@@ -35,7 +35,7 @@ get_header(); ?>
 	
 <article class="entry front-page-content" id="film-front">
 	<header>
-		<h2><?php _e( 'The Film', 'mule' ); ?></h2>
+		<h2><?php _e( 'The Film', 'mule-theme' ); ?></h2>
 	</header>
 	<div class="wrapper">
 		<?php echo apply_filters( 'the_content', get_post_field( 'post_content', 33 ) ); ?>
@@ -44,7 +44,7 @@ get_header(); ?>
 
 <article class="entry front-page-content" id="filmmaker-front">
 	<header>
-		<h2><?php _e( 'The Filmmaker', 'mule' ); ?></h2>
+		<h2><?php _e( 'The Filmmaker', 'mule-theme' ); ?></h2>
 	</header>
 		 
 	<div class="wrapper">

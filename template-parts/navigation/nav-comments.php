@@ -12,11 +12,11 @@ function mule_comments_nav() {
 	<nav class="comments-nav" role="navigation">
 	<?php
 		$title = get_the_title();
-		if ( $prev_link = get_previous_comments_link( __( 'Older Comments', 'mule' ) ) ) :
+		if ( $prev_link = get_previous_comments_link( __( 'Older Comments', 'mule-theme' ) ) ) :
 			printf ( '<span class="prev-comments pf-tooltip" rel="prev" title="Older comments on ' . $title . '">%s</span>', $prev_link );
 		endif;
 
-		if ( $next_link = get_next_comments_link( __( 'Newer Comments', 'mule' ) ) ) :
+		if ( $next_link = get_next_comments_link( __( 'Newer Comments', 'mule-theme' ) ) ) :
 			printf ( '<span class="next-comments pf-tooltip" rel="next" title="Newer comments on ' . $title . '">%s</span>', $next_link );
 		endif;
 	?>

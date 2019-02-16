@@ -123,11 +123,11 @@ if ( ! function_exists( 'mule_paged_nav' ) ) :
 		$title        = get_the_title();
 		$tooltip_next = ' title="Continue reading ' . $title . '"';
 		$tooltip_prev = ' title="Previous page of ' . $title . '"';
-		$next         = __( '<span class="paged-continue pf-tooltip"' . $tooltip_next . '>Continue Reading<span class="screen-reader-text"> ' . $title . '</span></span>', 'mule' );
-		$prev         = __( '<span class="paged-back pf-tooltip"' . $tooltip_prev . '>Previous Page<span class="screen-reader-text"> of ' . $title . '</span></span>', 'mule' );
+		$next         = __( '<span class="paged-continue pf-tooltip"' . $tooltip_next . '>Continue Reading<span class="screen-reader-text"> ' . $title . '</span></span>', 'mule-theme' );
+		$prev         = __( '<span class="paged-back pf-tooltip"' . $tooltip_prev . '>Previous Page<span class="screen-reader-text"> of ' . $title . '</span></span>', 'mule-theme' );
 
 		wp_link_pages( array( 
-			'before'           => '<p class="paginated-post-links ' . $class . '">', 'mule',
+			'before'           => '<p class="paginated-post-links ' . $class . '">', 'mule-theme',
 			'after'            => '</p>',
 			'link_before'      => $link_before,
 			'next_or_number'   => $paged_nav,

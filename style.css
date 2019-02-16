@@ -907,6 +907,23 @@ div.sharedaddy h3.sd-title:before {
     font-style: italic;
 }
 
+h3.video-snippet-donate {
+    margin: 1em 0;
+    text-align: center
+}
+
+.video-snippet-donate a {
+    display: inline-block;
+    background: #3c5ea2;
+    border-radius: .15em;
+    padding: .3em .5em;
+    font-size: 4rem;
+    font-weight: normal;
+    color: #fff;
+    -webkit-transition: all .15s;
+    transition: all .15s
+}
+
 /**
  * Footer
  */

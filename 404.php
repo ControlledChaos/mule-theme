@@ -12,7 +12,7 @@ get_header(); ?>
 
 	<main class="main" role="main">
 
-		<h2 class="page-title"><?php _e( 'Oops!', 'mule' ); ?></h2>
+		<h2 class="page-title"><?php _e( 'Oops!', 'mule-theme' ); ?></h2>
 		
 		<p>We couldn't find what you are looking for. Try looking on our <a href="<?php echo home_url(); ?>/">home page</a> or perhaps searching for a term...</p>
 		
