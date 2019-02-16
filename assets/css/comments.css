@@ -1,0 +1,114 @@
+/*
+ * COMMENTS
+ */
+
+.comments-section {}
+
+.comments-title {}
+
+.comments-nav {
+	display: flexbox;
+	display: flex;
+	justify-content: flex-start;
+	margin-top: 1em;
+}
+
+.next-comments,
+.prev-comments {
+	display: block;
+	width: 50%;
+}
+
+.next-comments {
+	text-align: right;
+	margin-left: auto;
+}
+
+.prev-comments a:before,
+.prev-comments a:after,
+.next-comments a:before,
+.next-comments a:after {
+	display: inline-block;
+	font-family: 'FontAwesome';
+	text-decoration: none;
+}
+
+.prev-comments a:before {
+	content: '\f060';
+	margin-right: 0.5em;
+}
+
+.next-comments a:after {
+	content: '\f061';
+	margin-left: 0.5em;
+}
+
+.comments {
+	padding-top: 2em;
+}
+
+.comment-form textarea {
+	margin-top: 1em;
+	width: 100%;
+	max-width: 768px;
+	min-height: 200px;
+}
+	
+ol.comment-list {
+	list-style: none;
+}
+
+ol.comment-list li {
+	margin-top: 1em;
+}
+
+ol.comment-list li.comment div.vcard img.avatar {
+	vertical-align: middle;
+}
+
+ol.comment-list li.comment div.comment-metadata {
+	margin-top: 0.5em;
+}
+
+.comment-content p {
+	margin-top: 1em;
+	font-size: 1.8rem;
+	line-height: 1.6em;
+}
+
+.comment-edit-link {
+	font-size: 85%;
+	margin-left: 0.5em;
+}
+
+.comment-edit-link:after {
+	display: inline-block;
+	margin-left: 0.3em;
+	transform: translateY(-0.3em);
+	font-family: 'FontAwesome';
+	content: '\f040';
+	text-decoration: none;
+}
+
+.reply {
+	margin-top: 0.5em;
+}
+
+.comment-reply-link {}
+
+.comment-reply-link:before {
+	display: inline-block;
+	margin-right: 0.5em;
+	font-family: 'FontAwesome';
+	content: '\f112';
+	text-decoration: none;
+}
+
+ol.comment-list li.comment ul.children {
+	list-style: none;
+	margin-left: 1em;
+}
+
+ol.comment-list li.comment ul.children li article.comment-body {
+	margin-top: 0;
+}

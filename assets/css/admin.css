@@ -1,0 +1,24 @@
+/**
+ * Backend styles + frontend admin bar
+ * 
+ * This style sheet is enqueued on the
+ * front end for logged-in users, so use
+ * selectors specific to wp-admin
+ */
+
+body.wp-admin {}
+
+.wp-admin h1 {}
+
+.wp-admin h2 {}
+
+.wp-admin h3 {}
+
+.wp-admin p {}
+
+.wp-admin a,
+.wp-admin a:visited {}
+
+.wp-admin a:hover,
+.wp-admin a:active,
+.wp-admin a:focus {}

@@ -1,2 +1,3 @@
-# mule-theme
-Client project.
+# Mule Theme
+
+Theme for a client project.

@@ -1,0 +1,58 @@
+@font-face {
+	font-family: 'Ostrich';
+	src: url('assets/fonts/ostrichsans-medium-webfont.woff2') format('woff2'),
+		url('assets/fonts/ostrichsans-medium-webfont.woff') format('woff'),
+		url('assets/fonts/OstrichSans-Medium.otf') format('opentype');
+	font-weight: normal; font-style: normal;
+}
+
+body {
+	font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+}
+
+h1,
+h2,
+h3 {
+	margin-top: 1em;
+	font-family: 'freight-sans-compressed-pro', 'Ostrich', sans-serif;
+	text-transform: uppercase;
+	letter-spacing: 0.03em;
+	color: #3c5ea2;
+}
+
+h1,
+h2 {
+	font-size: 50px;
+	font-weight: normal;
+	font-weight: 400;
+}
+
+h3 {
+	font-size: 38px;
+	font-weight: normal;
+	font-weight: 400;
+}
+
+h4 {
+	margin-top: 1em;
+	font-size: 22px;
+	font-weight: bold;
+	font-weight: 600;
+}
+
+p {
+	margin-top: 1em;
+	font-size: 18px;
+	line-height: 1.6em;
+}
+
+a {
+	text-decoration: none;
+	outline: none;
+	color: #3c5ea2;
+	transition: all .15s;
+}
+
+ul {
+	margin-top: 1em;
+}
