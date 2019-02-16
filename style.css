@@ -479,6 +479,7 @@ body:not(.home) .nav-up {
 .intro-title .site-title {
     font-family: 'Ostrich', 'freight-sans-compressed-pro', sans-serif;
     font-size: 20rem;
+    text-transform: uppercase;
     text-stroke: .004em #fff;
     -webkit-text-stroke: .004em #fff;
     text-shadow: .004em .004em 0 #fff, .004em -.004em 0 #fff, -.004em .004em 0 #fff, -.004em -.004em 0 #fff, .006em .006em .03em rgba(0, 0, 0, 0.85)

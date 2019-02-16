@@ -5,6 +5,8 @@ if ( ! function_exists( 'mule_loader' ) ) :
 			$loading = __( 'Loading Mule', 'mule' );
 		} elseif ( is_home() ) {
 			$loading =  __( 'Loading Mule News', 'mule' );
+		} elseif ( is_singular( 'snippets' ) ) {
+			$loading =  __( 'Loading Video Snippet', 'mule' );
 		} elseif ( is_single() ) {
 			$loading =  __( 'Loading News Post', 'mule' );
 		} elseif ( is_category() ) {

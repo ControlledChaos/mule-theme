@@ -217,12 +217,13 @@ final class Functions {
 		 * @since  1.0.0
 		 */
 		register_nav_menus(
-			array(
-			'main'       => __( 'Main Menu', 'mule-theme' ),
-			'main-front' => __( 'Front Page Menu', 'mule-theme' ),
-			'footer'     => __( 'Footer Menu', 'mule-theme' ),
-			'social'     => __( 'Social Menu', 'mule-theme' )
-			)
+			[
+				'main'       => __( 'Main Menu', 'mule-theme' ),
+				'main-front' => __( 'Front Page Menu', 'mule-theme' ),
+				'snippets'   => __( 'Snippets Menu', 'mule-theme' ),
+				'footer'     => __( 'Footer Menu', 'mule-theme' ),
+				'social'     => __( 'Social Menu', 'mule-theme' )
+			]
 		);
 /**
 		 * Add stylesheets for the content editor.
