@@ -19,7 +19,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 ?><!doctype html>
 <html <?php language_attributes(); ?> class="no-js">
-<head data-template-set="mule">
+<head>
 	<?php Functions::remove_cf7_scripts(); mule_head(); ?>
 </head>
 	<?php mule_body(); ?>
