@@ -7,13 +7,17 @@
  * @since Mule 1.0
  */
 
+namespace Mule_Theme;
+
+use Mule_Theme\Functions;
+
 // Restrict direct access
 if ( ! defined( 'ABSPATH' ) ) exit;
 
-?><!DOCTYPE html>
+?><!doctype html>
 <html <?php language_attributes(); ?> class="no-js">
 <head data-template-set="mule">
-	<?php mule_remove_cf7(); mule_head(); ?>
+	<?php Functions::remove_cf7_scripts(); mule_head(); ?>
 </head>
 	<?php mule_body(); ?>
 	<?php mule_loader(); ?>
