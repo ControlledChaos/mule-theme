@@ -2,9 +2,9 @@
 /**
  * Template tags
  *
- * @package WordPress
- * @subpackage Mule
- * @since Mule 1.0.0
+ * @package    WordPress
+ * @subpackage Mule_Theme
+ * @since      Mule 1.0.0.0
  */
 
 if ( ! function_exists( 'mule_body' ) ) :

@@ -2,7 +2,7 @@
 /**
  * Header parts
  *
- * @package WordPress
+ * @package    WordPress
  * @subpackage Poker_Face
  * @since Poker Face 1.0.0
  */

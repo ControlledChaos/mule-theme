@@ -2,17 +2,20 @@
 /**
  * Header template
  *
- * @package WordPress
- * @subpackage Mule
- * @since Mule 1.0
+ * @package    WordPress
+ * @subpackage Mule_Theme
+ * @since      Mule 1.0.0
  */
 
 namespace Mule_Theme;
 
+// Access methods of the functions file.
 use Mule_Theme\Functions;
 
-// Restrict direct access
-if ( ! defined( 'ABSPATH' ) ) exit;
+// Restrict direct access.
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
 
 ?><!doctype html>
 <html <?php language_attributes(); ?> class="no-js">

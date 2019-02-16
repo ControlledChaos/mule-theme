@@ -2,9 +2,9 @@
 /**
  * Navigation parts
  *
- * @package WordPress
- * @subpackage Mule
- * @since Mule 1.0.0
+ * @package    WordPress
+ * @subpackage Mule_Theme
+ * @since      Mule 1.0.0.0
  */
 
 get_template_part( 'template-parts/navigation/nav', 'posts' );

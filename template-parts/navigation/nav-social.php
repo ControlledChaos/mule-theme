@@ -2,8 +2,8 @@
 /**
  * Social navigation template
  *
- * @package WordPress
- * @subpackage Mule
+ * @package    WordPress
+ * @subpackage Mule_Theme
  * @since Mulee 1.0.0
  */
 ?>

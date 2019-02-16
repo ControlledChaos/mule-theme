@@ -14,7 +14,9 @@
 namespace Mule_Theme;
 
 // Restrict direct access.
-if ( ! defined( 'ABSPATH' ) ) exit;
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
 
 // Get plugins path to check for active plugins.
 include_once( ABSPATH . 'wp-admin/includes/plugin.php' );
