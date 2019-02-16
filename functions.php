@@ -284,13 +284,13 @@ final class Functions {
 	public function frontend_scripts() {
 
 		wp_enqueue_script( 'jquery' );
-		wp_enqueue_script( 'html5', get_theme_file_uri( '/assets/js/html5.min.js' ), [], '', true );
+		wp_enqueue_script( 'html5', get_parent_theme_file_uri( '/assets/js/html5.min.js' ), [], '', true );
 		wp_script_add_data( 'html5', 'conditional', 'lt IE 9' );
 		wp_enqueue_script( 'typekit', 'https://use.typekit.net/fmg8rqq.js', [], false, true );
 		wp_add_inline_script( 'typekit', 'try{Typekit.load({ async: false });}catch(e){}' );
-		wp_enqueue_script( 'theme-functions', get_theme_file_uri( '/assets/js/jquery.theme-functions.min.js' ), [ 'jquery' ], false, true );
-		wp_enqueue_script( 'nav-bar', get_theme_file_uri( '/assets/js/jquery.navbar.min.js' ), [ 'jquery' ], false, true );
-		wp_enqueue_script( 'fitvids', get_theme_file_uri( '/assets/js/jquery.fitvids.min.js' ), [ 'jquery' ], false, true );
+		wp_enqueue_script( 'theme-functions', get_parent_theme_file_uri( '/assets/js/jquery.theme-functions.min.js' ), [ 'jquery' ], false, true );
+		wp_enqueue_script( 'nav-bar', get_parent_theme_file_uri( '/assets/js/jquery.navbar.min.js' ), [ 'jquery' ], false, true );
+		wp_enqueue_script( 'fitvids', get_parent_theme_file_uri( '/assets/js/jquery.fitvids.min.js' ), [ 'jquery' ], false, true );
 		wp_add_inline_script( 'fitvids', '
 			jQuery(document).ready(function(){
 				jQuery( ".mule-trailer, .entry" ).fitVids();
@@ -310,7 +310,7 @@ final class Functions {
 
 		wp_enqueue_script( 'typekit', 'https://use.typekit.net/fmg8rqq.js', [], null, true );
 		wp_add_inline_script( 'typekit', 'try{Typekit.load({ async: false });}catch(e){}' );
-		wp_enqueue_script( 'excerpts', get_theme_file_uri( '/assets/js/jquery.excerpts.js', [ 'jquery' ], '', true ) );
+		wp_enqueue_script( 'excerpts', get_parent_theme_file_uri( '/assets/js/jquery.excerpts.js', [ 'jquery' ], '', true ) );
 
 	}
 
@@ -324,7 +324,7 @@ final class Functions {
 	public function frontend_styles() {
 
 		// Theme sylesheet.
-		wp_enqueue_style( 'mule-style', get_theme_file_uri( 'style.min.css' ), [], '', 'screen' );
+		wp_enqueue_style( 'mule-style', get_parent_theme_file_uri( 'style.min.css' ), [], '', 'screen' );
 
 		// Get Google fonts.
 		wp_enqueue_style( 'open-sans', 'https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i', [], '', 'screen' );
