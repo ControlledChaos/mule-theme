@@ -324,7 +324,7 @@ final class Functions {
 	public function frontend_styles() {
 
 		// Theme sylesheet.
-		wp_enqueue_style( 'mule-style', get_stylesheet_uri(), [], '', 'screen' );
+		wp_enqueue_style( 'mule-style', get_theme_file_uri( 'style.min.css' ), [], '', 'screen' );
 
 		// Get Google fonts.
 		wp_enqueue_style( 'open-sans', 'https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i', [], '', 'screen' );
