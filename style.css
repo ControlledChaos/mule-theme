@@ -735,36 +735,7 @@ h3.featured-video-donate {
     content: '\f105'
 }
 
-.numeric-pagination {
-    clear: both;
-    margin-top: 3em;
-    font-size: 1.2em
-}
-
-.numeric-pagination-label {
-    font-weight: bold;
-    font-weight: 600
-}
-
-.numeric-pagination ul {
-    margin-top: .5em
-}
-
-.numeric-pagination li {
-    display: inline
-}
-
-.numeric-pagination li:first-of-type a,
-.numeric-pagination li:last-of-type a {
-    text-decoration: none
-}
-
-.numeric-pagination li.active a {
-    font-weight: bold;
-    text-decoration: underline
-}
-
-.posts-nav {
+.nav-links {
     clear: both;
     display: flexbox;
     display: -webkit-box;
@@ -778,21 +749,22 @@ h3.featured-video-donate {
     margin-top: 3em
 }
 
-.next-posts,
-.prev-posts {
+.nav-next,
+.nav-previous {
     display: block;
-    width: 50%
+    width: 50%;
+    line-height: 1.6;
 }
 
-.next-posts {
+.nav-next {
     text-align: right;
     margin-left: auto
 }
 
-.prev-posts a:before,
-.prev-posts a:after,
-.next-posts a:before,
-.next-posts a:after,
+.nav-previous a:before,
+.nav-previous a:after,
+.nav-next a:before,
+.nav-next a:after,
 .prev-page a:before,
 .prev-page a:after,
 .next-page a:before,
@@ -804,14 +776,14 @@ h3.featured-video-donate {
     text-decoration: none
 }
 
-.prev-posts a:before,
+.nav-previous a:before,
 .prev-page a:before,
 .paged-next span.paged-back:before {
     content: '\f060';
     margin-right: .5em
 }
 
-.next-posts a:after,
+.nav-next a:after,
 .next-page a:after,
 .paged-next span.paged-continue:after {
     content: '\f061';

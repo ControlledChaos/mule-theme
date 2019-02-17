@@ -34,4 +34,13 @@
 		<?php the_content(); ?>
 	</div><!-- entry-content -->
 
+	<?php the_post_navigation(
+		[
+			'next_text' => '<span class="screen-reader-text">' . __( 'Next post:', 'mule-theme' ) . '</span>' .
+				'<span class="post-title">%title</span>',
+			'prev_text' => '<span class="screen-reader-text">' . __( 'Previous post:', 'mule-theme' ) . '</span>' .
+				'<span class="post-title">%title</span>',
+		]
+	); ?>
+
 </article>
