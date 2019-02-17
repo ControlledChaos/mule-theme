@@ -28,22 +28,28 @@ get_header(); ?>
 		?>
 		</header>
 
-		<?php if ( have_posts() ) : 
+		<?php if ( have_posts() ) {
 		global $post;
-	 	$post = $posts[0]; ?>
-	 	
+		 $post = $posts[0];
+
+		 if ( is_post_type_archive( 'snippets' ) ) { echo '<ul class="video-grid">'; } ?>
+
 		<?php while ( have_posts() ) : the_post(); ?>
 
-			<?php get_template_part( 'template-parts/post/content' ); ?>
+			<?php
+			if ( is_post_type_archive( 'snippets' ) ) {
+				 the_content();
+			} else {
+				get_template_part( 'template-parts/post/content' );
+			}
+		endwhile;
 
-		<?php endwhile;
-		
-			mule_numeric_posts_nav();
+			if ( is_post_type_archive( 'snippets' ) ) { echo '</ul>'; }
 
-		else : 
+		} else {
 			get_template_part( 'template-parts/post/content', 'none' );
-		endif; ?>
-		
+		} ?>
+
 	</main>
 
 </div><!-- site-content -->
