@@ -29,27 +29,48 @@ get_header(); ?>
 		</header>
 
 		<?php if ( have_posts() ) {
-		global $post;
-		 $post = $posts[0];
 
-		 if ( is_post_type_archive( 'snippets' ) ) { echo '<ul class="video-grid">'; } ?>
+			global $post;
 
-		<?php while ( have_posts() ) : the_post(); ?>
+			$post  = $posts[0];
+			$intro = get_field( 'snippets_archive_intro', 'option' );
 
-			<?php
-			if ( is_post_type_archive( 'snippets' ) ) {
-				 the_content();
-			} else {
-				get_template_part( 'template-parts/post/content' );
-			}
-		endwhile;
+			if ( is_post_type_archive( 'snippets' ) ) { ?>
+				<?php if ( is_paged() ) { ?>
+				<nav class="nav-links">
+					<span class="nav-previous" rel="prev"><?php previous_posts_link( __( 'Previous Page', 'mule-theme' ) ); ?></span>
+					<span class="nav-next" rel="next"><?php next_posts_link( __( 'Next Page', 'mule-theme' ) ); ?></span>
+				</nav>
+				<?php } ?>
+				<?php if ( $intro && ! is_paged() ) {
+					echo sprintf(
+						'<div class="snippets-archive-intro">%1s</div>',
+						$intro
+					);
+				}
+
+				echo '<ul class="video-grid">';
+			} ?>
+
+			<?php while ( have_posts() ) : the_post(); ?>
+
+				<?php
+				if ( is_post_type_archive( 'snippets' ) ) {
+					the_content();
+				} else {
+					get_template_part( 'template-parts/post/content' );
+				}
+			endwhile;
 
 			if ( is_post_type_archive( 'snippets' ) ) { echo '</ul>'; }
 
 		} else {
 			get_template_part( 'template-parts/post/content', 'none' );
 		} ?>
-
+		<nav class="nav-links">
+			<span class="nav-previous" rel="prev"><?php previous_posts_link( __( 'Previous Page', 'mule-theme' ) ); ?></span>
+			<span class="nav-next" rel="next"><?php next_posts_link( __( 'Next Page', 'mule-theme' ) ); ?></span>
+		</nav>
 	</main>
 
 </div><!-- site-content -->

@@ -154,7 +154,7 @@ body {
     padding: 3rem
 }
 
-body:not(.post):not(.page) .entry {
+body:not(.single):not(.page) .entry {
     clear: both;
     margin-top: 1em;
     padding: 1em 0;
@@ -183,6 +183,14 @@ h2 {
     font-size: 3.6rem;
     font-weight: 400;
     color: #555
+}
+
+.post-type-archive-snippets .archive-title h1 {
+    font-size: 5rem;
+    font-weight: normal;
+    font-weight: 400;
+    letter-spacing: .0225em;
+    color: #3c5ea2;
 }
 
 h3 {
@@ -320,7 +328,7 @@ body:not(.home) .nav-up {
 
 .main-menu li a:hover,
 .main-menu li.current-menu-item a,
-.main-menu li.menu-item-type-post_type_archive a {
+.main-menu li.menu-item-type-post_type_archive.current-menu-item a {
     border-color: #fff
 }
 
