@@ -9,6 +9,8 @@ if ( ! function_exists( 'mule_loader' ) ) :
 			$loading =  __( 'Loading Video Snippet', 'mule-theme' );
 		} elseif ( is_single() ) {
 			$loading =  __( 'Loading News Post', 'mule-theme' );
+		} elseif ( is_post_type_archive( 'snippets' ) ) {
+			$loading =  __( 'Loading Video Snippets', 'mule-theme' );
 		} elseif ( is_category() ) {
 			$loading =  __( 'Loading News Category', 'mule-theme' );
 		} elseif ( is_tag() ) {
