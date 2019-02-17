@@ -154,7 +154,7 @@ body {
     padding: 3rem
 }
 
-body:not(.single):not(.page) .entry {
+body:not(.post):not(.page) .entry {
     clear: both;
     margin-top: 1em;
     padding: 1em 0;

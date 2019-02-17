@@ -503,7 +503,7 @@ final class Functions {
 
 		// If it's the snippets archive.
 		if ( is_post_type_archive( 'snippets' ) ) {
-			return __( 'Video Snippets:', 'mule-theme' );
+			return __( 'Video Snippets', 'mule-theme' );
 
 		// Remove any HTML, words, digits, and spaces before the title.
 		} else {
