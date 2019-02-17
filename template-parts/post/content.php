@@ -13,7 +13,7 @@
 	<header class="entry-header">
 		<?php
 			if ( is_singular( 'snippets' ) ) {
-				echo sprintf( '<h3>%1s</h3>', __( 'Video Snippet:' ) );
+				echo sprintf( '<h3 class="snippet-subtitle">%1s</h3>', __( 'Video Snippet:' ) );
 				the_title( '<h1 class="entry-title">', '</h1>' );
 			} elseif ( is_singular() ) {
 				the_title( '<h1 class="entry-title">', '</h1>' );
@@ -34,13 +34,14 @@
 		<?php the_content(); ?>
 	</div><!-- entry-content -->
 
-	<?php the_post_navigation(
-		[
-			'next_text' => '<span class="screen-reader-text">' . __( 'Next post:', 'mule-theme' ) . '</span>' .
-				'<span class="post-title">%title</span>',
-			'prev_text' => '<span class="screen-reader-text">' . __( 'Previous post:', 'mule-theme' ) . '</span>' .
-				'<span class="post-title">%title</span>',
-		]
-	); ?>
-
+	<?php if ( is_singular() ) {
+		the_post_navigation(
+			[
+				'next_text' => '<span class="screen-reader-text">' . __( 'Next post:', 'mule-theme' ) . '</span>' .
+					'<span class="post-title">%title</span>',
+				'prev_text' => '<span class="screen-reader-text">' . __( 'Previous post:', 'mule-theme' ) . '</span>' .
+					'<span class="post-title">%title</span>',
+			]
+		);
+	} ?>
 </article>

@@ -104,6 +104,9 @@ final class Functions {
 		// Choose image sizes.
 		add_filter( 'image_size_names_choose', [ $this, 'image_insert' ] );
 
+		// Modify the archive title.
+		add_filter( 'get_the_archive_title', [ $this, 'archive_title' ] );
+
 	}
 
 	/**
@@ -486,6 +489,26 @@ final class Functions {
 		];
 
 		return $size_names;
+
+	}
+
+	/**
+	 * Modify the archive title
+	 *
+	 * @since  1.0.0
+	 * @access public
+	 * @return void
+	 */
+	public function archive_title( $title ) {
+
+		// If it's the snippets archive.
+		if ( is_post_type_archive( 'snippets' ) ) {
+			return __( 'Video Snippets:', 'mule-theme' );
+
+		// Remove any HTML, words, digits, and spaces before the title.
+		} else {
+			return preg_replace( '#^[\w\d\s]+:\s*#', '', strip_tags( $title ) );
+		}
 
 	}
 

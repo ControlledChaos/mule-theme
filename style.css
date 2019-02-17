@@ -181,6 +181,7 @@ h2 {
 .blog-title h1,
 .archive-title h1 {
     font-size: 3.6rem;
+    font-weight: 400;
     color: #555
 }
 
@@ -189,6 +190,12 @@ h3 {
     font-weight: normal;
     font-weight: 500;
     letter-spacing: .015em
+}
+
+h3.snippet-subtitle {
+    font-size: 3.6rem;
+    font-weight: 400;
+    color: #555
 }
 
 h4 {
@@ -313,7 +320,7 @@ body:not(.home) .nav-up {
 
 .main-menu li a:hover,
 .main-menu li.current-menu-item a,
-.main-menu li.current_page_parent a {
+.main-menu li.menu-item-type-post_type_archive a {
     border-color: #fff
 }
 
