@@ -911,6 +911,10 @@ h3.video-snippet-donate {
     transition: all .15s
 }
 
+.snippets-archive-intro {
+    line-height: 1.5;
+}
+
 .video-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
