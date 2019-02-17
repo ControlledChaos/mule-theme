@@ -912,6 +912,10 @@ h3.video-snippet-donate {
 	list-style: none;
 }
 
+.video-grid li {
+    margin: 0 !important;
+}
+
 .video-grid figure {
     position: relative;
     overflow: hidden;
