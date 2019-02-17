@@ -903,6 +903,81 @@ h3.video-snippet-donate {
     transition: all .15s
 }
 
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+	grid-gap: 0.35em 0.35em;
+	max-width: 1280px;
+	margin: 2em 0 0;
+	list-style: none;
+}
+
+.video-grid figure {
+    position: relative;
+    overflow: hidden;
+}
+
+.video-grid img {
+    display: block;
+    width: 100%;
+}
+
+.video-grid figcaption {
+	pointer-events: none;
+	position: absolute;
+	left: 0;
+    bottom: 0;
+    width: 100%;
+	height: auto;
+    padding: 1em;
+    background: -webkit-gradient(
+        linear,
+        left top, left bottom,
+        from(transparent),
+        color-stop(50%, rgba(0,0,0,0.475)),
+        to(rgba(0,0,0,0.65))
+	);
+    background: linear-gradient(
+        to bottom,
+        transparent 0%,
+        rgba(0,0,0,0.475) 50%,
+        rgba(0,0,0,0.65) 100%
+	);
+    color: #fff;
+    line-height: 1.3;
+}
+
+.video-grid a {
+	pointer-events: auto;
+	text-decoration: none;
+	color: #fff;
+}
+
+.video-grid img {
+    opacity: 0.925;
+    -webkit-filter: grayscale(10%);
+            filter: grayscale(10%);
+    -webkit-transition: all .2s;
+    transition: all .2s;
+}
+
+.video-grid li:hover img,
+.video-grid li:focus img {
+    opacity: 1;
+    -webkit-filter: grayscale(0%);
+            filter: grayscale(0%);
+}
+
+.video-grid figcaption h3 {
+    margin-top: 0.5em;
+    font-size: 1.85rem;
+    font-weight: bold;
+	font-weight: 600;
+	line-height: 1.1;
+	letter-spacing: 0.075em;
+    color: #fff;
+}
+
 /**
  * Footer
  */
@@ -1593,6 +1668,38 @@ sub {
     vertical-align: text-bottom
 }
 
+/* When CSS Flexbox is not supported */
+@supports not ( ((display: -webkit-box) or (display: flex)) or (display: flexbox) ) {
+	.video-grid {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: -moz-box;
+		display: flex;
+		-ms-flex-wrap: wrap;
+		    flex-wrap: wrap;
+	}
+
+	.video-grid li {
+		width: 33.33325%;
+		width: calc(100% / 3);
+		padding: 0.5em;
+	}
+
+	@media screen and (max-width: 768px) {
+		.video-grid li,
+		.entry-gallery-list li {
+			width: 50%;
+		}
+	}
+
+	@media screen and (max-width: 480px) {
+		.video-grid li {
+			width: 100%;
+			padding: 0.5em 0;
+		}
+	}
+}
+
 @media screen and (max-width: 782px) {
 	.logged-in.admin-bar .nav {
         top: 46px;
@@ -1689,7 +1796,7 @@ sub {
     }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 834px) {
     .nav:hover {
         background: transparent
     }
@@ -1736,6 +1843,10 @@ sub {
     .entry-content .video-snippet-menu ul li:not(:last-of-type) a:after {
         display: none;
     }
+
+    .video-grid {
+		grid-template-columns: repeat(1, 1fr);
+	}
 
 }
 
