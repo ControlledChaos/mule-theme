@@ -1084,7 +1084,8 @@ h3.video-snippet-donate {
 }
 
 .site-credits p {
-    line-height: 1.2
+    line-height: 1.2;
+    color: #333;
 }
 
 .site-credits-name {

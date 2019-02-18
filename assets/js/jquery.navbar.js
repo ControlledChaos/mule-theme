@@ -36,7 +36,7 @@ function hasScrolled() {
 /**
  * Add "scrolled" class to nav bar
  */
-jQuery(window).scroll(function() {    
+jQuery(window).scroll(function() {
   var scroll = jQuery(window).scrollTop();
 
   if (scroll >= 50) {

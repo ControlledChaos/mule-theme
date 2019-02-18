@@ -82,6 +82,9 @@ final class Functions {
 		// Frontend scripts.
 		add_action( 'wp_enqueue_scripts', [ $this, 'frontend_scripts' ] );
 
+		// Footer scripts.
+		add_action( 'wp_footer', [ $this, 'footer_scripts' ], 11 );
+
 		// Admin scripts.
 		add_action( 'admin_enqueue_scripts', [ $this, 'admin_scripts' ] );
 
@@ -294,12 +297,39 @@ final class Functions {
 		wp_add_inline_script( 'typekit', 'try{Typekit.load({ async: false });}catch(e){}' );
 		wp_enqueue_script( 'theme-functions', get_parent_theme_file_uri( '/assets/js/jquery.theme-functions.min.js' ), [ 'jquery' ], false, true );
 		wp_enqueue_script( 'nav-bar', get_parent_theme_file_uri( '/assets/js/jquery.navbar.min.js' ), [ 'jquery' ], false, true );
-		wp_enqueue_script( 'fitvids', get_parent_theme_file_uri( '/assets/js/jquery.fitvids.min.js' ), [ 'jquery' ], false, true );
-		wp_add_inline_script( 'fitvids', '
-			jQuery(document).ready(function(){
-				jQuery( ".mule-trailer, .entry" ).fitVids();
-			});
-		' );
+
+	}
+
+	/**
+	 * Footer scripts.
+	 *
+	 * @since  3.0.0
+	 * @access public
+	 * @return mixed Returns JavaScript in HTML tags.
+	 */
+	public function footer_scripts() {
+
+		// Apply FitVids to content.
+		$fitvids  = '<script>';
+		$fitvids .= 'jQuery(document).ready(function(){ jQuery( ".mule-trailer, .entry" ).fitVids(); });';
+		$fitvids .= '</script>';
+		echo $fitvids;
+
+		// Apply Fancybox.
+		$fancybox  = '<script>';
+		$fancybox .= 'jQuery(document).ready(function() {
+		jQuery("[data-fancybox]").fancybox({
+			padding     : 0,
+			openEffect  : "elastic",
+			closeEffect : "elastic",
+			type        : "iframe",
+			iframe:{
+			scrolling : "yes",
+			},
+		});
+		});';
+		$fancybox .= '<script>';
+		echo $fancybox;
 
 	}
 

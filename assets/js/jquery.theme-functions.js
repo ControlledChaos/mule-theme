@@ -43,7 +43,7 @@ jQuery(document).ready(function() {
     openEffect  : 'elastic',
     closeClick  : false,
         arrows      : false,
-    helpers     : { 
+    helpers     : {
       overlay : {
         closeClick: false
       },
@@ -72,7 +72,7 @@ jQuery(document).ready(function() {
     padding     : 0,
     openEffect  : 'elastic',
     closeClick  : false,
-    helpers     : { 
+    helpers     : {
       overlay : {
         closeClick: true
       },
@@ -82,18 +82,7 @@ jQuery(document).ready(function() {
 
 }
 
-/**
- * Apply Fancybox
- */
-
-jQuery(document).ready(function() {
-  jQuery('[data-fancybox]').fancybox({
-    padding     : 0,
-    openEffect  : 'elastic',
-    closeEffect : 'elastic',
-    type        : 'iframe',
-    iframe:{
-      scrolling : 'yes',
-    },
-  });
+// Apply FitVids to content.
+jQuery(document).ready(function () {
+  jQuery(".mule-trailer, .entry").fitVids();
 });
