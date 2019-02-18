@@ -32,7 +32,7 @@ get_header(); ?>
 		<p class="featured-video-message"><?php echo $message; ?></p>
 	</div><!-- trailer-inner -->
 </section><!-- trailer -->
-	
+
 <article class="entry front-page-content" id="film-front">
 	<header>
 		<h2><?php _e( 'The Film', 'mule-theme' ); ?></h2>
@@ -46,7 +46,7 @@ get_header(); ?>
 	<header>
 		<h2><?php _e( 'The Filmmaker', 'mule-theme' ); ?></h2>
 	</header>
-		 
+
 	<div class="wrapper">
 		<?php echo apply_filters( 'the_content', get_post_field( 'post_content', 35 ) ); ?>
 	</div>

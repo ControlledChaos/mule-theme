@@ -21,10 +21,10 @@ get_header(); ?>
 			<?php get_template_part( 'template-parts/post/content', 'excerpt' ); ?>
 
 		<?php endwhile;
-		
+
 			mule_numeric_posts_nav();
 
-		else : 
+		else :
 			get_template_part( 'template-parts/post/content', 'none' );
 		endif; ?>
 

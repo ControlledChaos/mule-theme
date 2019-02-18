@@ -182,16 +182,16 @@
 	.menu-toggle {
 		display: inline-block;
 	}
-	
+
 	.main-menu {
 		display: none;
 		padding-bottom: 1em;
 	}
-	
+
 	.main-menu.open {
 		display: block;
 	}
-	
+
 	.main-menu li {
 		display: block;
 		margin: 0;

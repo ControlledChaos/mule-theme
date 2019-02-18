@@ -15,19 +15,19 @@ get_header(); ?>
 		<header class="archive-title">
 			<h1><?php _e( 'Posts Tagged "', 'mule-theme' ) . single_tag_title() . _e( '"', 'mule-theme'  ); ?></h1>
 		</header>
-		
+
 		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
 			<?php get_template_part( 'template-parts/post/content' ); ?>
 
 		<?php endwhile;
-		
+
 			mule_numeric_posts_nav();
 
-		else : 
+		else :
 			get_template_part( 'template-parts/post/content', 'none' );
 		endif; ?>
-		
+
 	</main>
 
 </div><!-- site-content -->

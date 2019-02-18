@@ -18,12 +18,12 @@ if ( post_password_required() ) {
 <?php if ( ! empty( $_SERVER['SCRIPT_FILENAME'] ) && 'comments.php' == basename( $_SERVER['SCRIPT_FILENAME'] ) )
 		die ( 'Please do not load this page directly.' );
 
-	if ( post_password_required() ) { 
+	if ( post_password_required() ) {
 		echo '<p>This post is password protected. Enter the password to view comments.</p>';
 
 		return;
 	}
-	
+
 $commenter = wp_get_current_commenter();
 $req       = get_option( 'require_name_email' );
 $aria_req  = ( $req ? " aria-required='true'" : '' );
@@ -80,9 +80,9 @@ if ( have_comments() ) : mule_comments_nav(); ?>
 		<ol class="comment-list">
 			<?php wp_list_comments(); ?>
 		</ol>
-	
+
 	</div><!-- comments -->
-	
+
 	<?php mule_comments_nav(); ?>
 
 <?php else : ?>
@@ -90,8 +90,8 @@ if ( have_comments() ) : mule_comments_nav(); ?>
 	<?php if ( comments_open() ) : echo '<p><em>Be the first to comment!</em></p>';
 
 		else : echo '<p>Comments are closed for this post.</p>';
-		
+
 	endif;
-	
+
 endif; ?>
 </section><!-- comments-section -->

@@ -11,23 +11,23 @@ get_header(); ?>
 <div class="site-content wrapper">
 
 	<main class="main" role="main" itemscope itemprop="mainContentOfPage">
-	
+
 		<header class="archive-title">
 			<h1><?php _e( 'Posts in "', 'mule-theme' ) . single_cat_title() . _e( '" Category', 'mule-theme'  ); ?></h1>
 		</header>
-		
+
 		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
 			<?php get_template_part( 'template-parts/post/content' ); ?>
 
 		<?php endwhile;
-		
+
 			mule_numeric_posts_nav();
 
-		else : 
+		else :
 			get_template_part( 'template-parts/post/content', 'none' );
 		endif; ?>
-		
+
 	</main>
 
 </div><!-- site-content -->
