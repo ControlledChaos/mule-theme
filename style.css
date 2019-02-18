@@ -768,6 +768,8 @@ h3.featured-video-donate {
 .nav-previous {
     display: block;
     width: 50%;
+    font-size: 1.2em;
+    font-weight: bold;
     line-height: 1.6;
 }
 
