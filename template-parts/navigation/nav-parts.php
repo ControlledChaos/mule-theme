@@ -4,7 +4,7 @@
  *
  * @package    WordPress
  * @subpackage Mule_Theme
- * @since      Mule 1.0.0.0
+ * @since      3.0.0
  */
 
 get_template_part( 'template-parts/navigation/nav', 'posts' );

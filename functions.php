@@ -3,7 +3,7 @@
  * Mule Theme functions.
  *
  * @package    WordPress
- * @subpackage Controlled_Chaos_Theme
+ * @subpackage Mule_Theme
  * @author     Greg Sweet <greg@ccdzine.com>
  * @copyright  Copyright (c) 2017 - 2018, Greg Sweet
  * @link       https://github.com/ControlledChaos/mule-theme
@@ -22,9 +22,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 include_once( ABSPATH . 'wp-admin/includes/plugin.php' );
 
 /**
- * Controlled Chaos functions class.
+ * Mule Theme functions class.
  *
- * @since  1.0.0
+ * @since  3.0.0
  * @access public
  */
 final class Functions {
@@ -32,7 +32,7 @@ final class Functions {
 	/**
 	 * Return the instance of the class.
 	 *
-	 * @since  1.0.0
+	 * @since  3.0.0
 	 * @access public
 	 * @return object
 	 */
@@ -61,7 +61,7 @@ final class Functions {
 	/**
 	 * Constructor magic method.
 	 *
-	 * @since  1.0.0
+	 * @since  3.0.0
 	 * @access public
 	 * @return void The constructor is empty.
 	 */
@@ -112,7 +112,7 @@ final class Functions {
 	/**
 	 * Replace 'no-js' class with 'js' in the <html> element when JavaScript is detected.
 	 *
-	 * @since  1.0.0
+	 * @since  3.0.0
 	 * @access public
 	 * @return string
 	 */
@@ -125,7 +125,7 @@ final class Functions {
 	/**
 	 * Theme setup.
 	 *
-	 * @since  1.0.0
+	 * @since  3.0.0
 	 * @access public
 	 * @return void
 	 */
@@ -134,14 +134,14 @@ final class Functions {
 		/**
 		 * Load domain for translation.
 		 *
-		 * @since 1.0.0
+		 * @since 3.0.0
 		 */
 		load_theme_textdomain( 'mule-theme', get_theme_file_uri( '/inc/languages' ) );
 
 		/**
 		 * Add theme support.
 		 *
-		 * @since 1.0.0
+		 * @since 3.0.0
 		 */
 
 		// Browser title tag support.
@@ -184,7 +184,7 @@ final class Functions {
 		 * Three sizes per aspect ratio so that WordPress
 		 * will use srcset for responsive images.
 		 *
-		 * @since 1.0.0
+		 * @since 3.0.0
 		 */
 		update_option( 'thumbnail_size_w', 180 );
 		update_option( 'thumbnail_size_h', 180 );
@@ -207,7 +207,7 @@ final class Functions {
 		/**
 		 * Set content width.
 		 *
-		 * @since 1.0.0
+		 * @since 3.0.0
 		 */
 
 		if ( ! isset( $content_width ) ) {
@@ -217,7 +217,7 @@ final class Functions {
 		/**
 		 * Register theme menus.
 		 *
-		 * @since  1.0.0
+		 * @since  3.0.0
 		 */
 		register_nav_menus(
 			[
@@ -231,7 +231,7 @@ final class Functions {
 /**
 		 * Add stylesheets for the content editor.
 		 *
-		 * @since 1.0.0
+		 * @since 3.0.0
 		 */
 		$font_url = str_replace( ',', '%2C', 'https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i' );
     	add_editor_style( $font_url );
@@ -240,7 +240,7 @@ final class Functions {
 		/**
 		 * Disable Jetpack open graph. We have the open graph tags in the theme.
 		 *
-		 * @since 1.0.0
+		 * @since 3.0.0
 		 */
 		if ( class_exists( 'Jetpack' ) ) {
 			add_filter( 'jetpack_enable_opengraph', '__return_false', 99 );
@@ -251,7 +251,7 @@ final class Functions {
 	/**
 	 * Clean up meta tags from the <head>.
 	 *
-	 * @since  1.0.0
+	 * @since  3.0.0
 	 * @access public
 	 * @return void
 	 */
@@ -266,7 +266,7 @@ final class Functions {
 	/**
 	 * TinyMCE editor scripts for Adobe Fonts/TypeKit
 	 *
-	 * @since  1.0.0
+	 * @since  3.0.0
 	 * @access public
 	 * @return array
 	 */
@@ -281,7 +281,7 @@ final class Functions {
 	/**
 	 * Frontend scripts.
 	 *
-	 * @since  1.0.0
+	 * @since  3.0.0
 	 * @access public
 	 * @return void
 	 */
@@ -306,7 +306,7 @@ final class Functions {
 	/**
 	 * Admin scripts.
 	 *
-	 * @since  1.0.0
+	 * @since  3.0.0
 	 * @access public
 	 * @return void
 	 */
@@ -321,7 +321,7 @@ final class Functions {
 	/**
 	 * Frontend styles.
 	 *
-	 * @since  1.0.0
+	 * @since  3.0.0
 	 * @access public
 	 * @return void
 	 */
@@ -340,7 +340,7 @@ final class Functions {
 	 *
 	 * Modifies the gallery image links.
 	 *
-	 * @since  1.0.0
+	 * @since  3.0.0
 	 * @access public
 	 * @param  string $content Gets the link HTML.
 	 * @param  integer $id Gets the post ID.
@@ -361,7 +361,7 @@ final class Functions {
 	 *
 	 * Modifies the single image links.
 	 *
-	 * @since  1.0.0
+	 * @since  3.0.0
 	 * @access public
 	 * @param  string $content Gets the link HTML.
 	 * @global object $post Gets the post object.
@@ -391,7 +391,7 @@ final class Functions {
 	 *
 	 * Sets the maximum image size.
 	 *
-	 * @since  1.0.0
+	 * @since  3.0.0
 	 * @access public
 	 * @param  string $image_id The id of the image (from ACF or similar).
 	 * @param  string $image_size The size of the thumbnail image or custom image size.
@@ -405,7 +405,7 @@ final class Functions {
 	/**
 	 * Add srcset attributes to ACF images
 	 *
-	 * @since  1.0.0
+	 * @since  3.0.0
 	 * @access public
 	 * @param  integer $image_id
 	 * @param  integer $image_size
@@ -436,7 +436,7 @@ final class Functions {
 	 * Makes image link to the full size file by default,
 	 * as opposed to the attachment page or none.
 	 *
-	 * @since  1.0.0
+	 * @since  3.0.0
 	 * @access public
 	 * @return void
 	 */
@@ -456,7 +456,7 @@ final class Functions {
 	 * Makes image link to the full size file by default,
 	 * as opposed to the attachment page or none.
 	 *
-	 * @since  1.0.0
+	 * @since  3.0.0
 	 * @access public
 	 * @return string
 	 */
@@ -472,7 +472,7 @@ final class Functions {
 	 *
 	 * Sizes available when inserting media.
 	 *
-	 * @since  1.0.0
+	 * @since  3.0.0
 	 * @access public
 	 * @return array
 	 */
@@ -495,7 +495,7 @@ final class Functions {
 	/**
 	 * Modify the archive title
 	 *
-	 * @since  1.0.0
+	 * @since  3.0.0
 	 * @access public
 	 * @return void
 	 */
@@ -515,7 +515,7 @@ final class Functions {
 	/**
 	 * Remove Contact Form 7 scripts and styles.
 	 *
-	 * @since  1.0.0
+	 * @since  3.0.0
 	 * @access public
 	 * @global object $post Gets the post object.
 	 * @return void
@@ -541,7 +541,7 @@ final class Functions {
 	/**
 	 * Theme dependencies.
 	 *
-	 * @since  1.0.0
+	 * @since  3.0.0
 	 * @access private
 	 * @return void
 	 */
@@ -561,7 +561,7 @@ final class Functions {
 /**
  * Gets the instance of the Functions class.
  *
- * @since  1.0.0
+ * @since  3.0.0
  * @access public
  * @return object
  */

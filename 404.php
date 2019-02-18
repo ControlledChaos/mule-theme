@@ -4,7 +4,7 @@
  *
  * @package    WordPress
  * @subpackage Mule_Theme
- * @since      Mule 1.0.0.0
+ * @since      3.0.0
  */
 get_header(); ?>
 
@@ -13,11 +13,11 @@ get_header(); ?>
 	<main class="main" role="main">
 
 		<h2 class="page-title"><?php _e( 'Oops!', 'mule-theme' ); ?></h2>
-		
+
 		<p>We couldn't find what you are looking for. Try looking on our <a href="<?php echo home_url(); ?>/">home page</a> or perhaps searching for a term...</p>
-		
+
 		<?php get_search_form(); ?>
-		
+
 	</main><!-- main -->
 
 </div><!-- site-content -->

@@ -1,10 +1,10 @@
 /*
-Theme Name: Mule
+Theme Name: Mule Version 3
 Theme URI: https://github.com/ControlledChaos/mule-theme
 Description: Designed for 3MulesMovie.com & John McDonald Productions.
 Author: Greg Sweet, Controlled Chaos Design
 Author URI: http://ccdzine.com/
-Version: 3.0
+Version: 3.0.0
 */
 
 /**
@@ -1685,7 +1685,7 @@ sub {
 }
 
 /* When CSS Flexbox is not supported */
-@supports not ( ((display: -webkit-box) or (display: flex)) or (display: flexbox) ) {
+@supports not ( (display: flex) or (display: flexbox) ) {
 	.video-grid {
 		display: -webkit-box;
 		display: -ms-flexbox;
