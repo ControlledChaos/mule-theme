@@ -33,7 +33,7 @@ if ( ! function_exists( 'mule_body' ) ) :
 		} else {
 			$itemtype = 'Blog';
 		}
-		
+
 		echo '<body class="' . join( ' ', get_body_class() ) . '" itemscope="itemscope" itemtype="http://schema.org/' . $itemtype . '">';
 	}
 

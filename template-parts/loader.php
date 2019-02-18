@@ -1,4 +1,12 @@
 <?php
+/**
+ * Page loader content
+ *
+ * @package    WordPress
+ * @subpackage Mule_Theme
+ * @since      3.0.0
+ */
+
 if ( ! function_exists( 'mule_loader' ) ) :
 	function mule_loader() {
 		if ( is_front_page() ) {

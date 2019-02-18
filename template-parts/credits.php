@@ -1,4 +1,12 @@
 <?php
+/**
+ * Website credits content
+ *
+ * @package    WordPress
+ * @subpackage Mule_Theme
+ * @since      3.0.0
+ */
+
 if ( ! function_exists( 'mule_credits' ) ) :
 	function mule_credits() { ?>
 		<p class="site-credits-link"><a data-fancybox data-src="#site-credits" href="javascript:;"><?php _e( 'Photo & Website Credits', 'mule-theme' ); ?></a></p>
