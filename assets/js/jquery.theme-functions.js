@@ -81,8 +81,3 @@ jQuery(document).ready(function() {
 });
 
 }
-
-// Apply FitVids to content.
-jQuery(document).ready(function () {
-  jQuery(".mule-trailer, .entry").fitVids();
-});

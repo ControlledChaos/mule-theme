@@ -83,7 +83,7 @@ final class Functions {
 		add_action( 'wp_enqueue_scripts', [ $this, 'frontend_scripts' ] );
 
 		// Footer scripts.
-		add_action( 'wp_footer', [ $this, 'footer_scripts' ], 11 );
+		add_action( 'wp_footer', [ $this, 'footer_scripts' ], 20 );
 
 		// Admin scripts.
 		add_action( 'admin_enqueue_scripts', [ $this, 'admin_scripts' ] );
@@ -311,24 +311,14 @@ final class Functions {
 
 		// Apply FitVids to content.
 		$fitvids  = '<script>';
-		$fitvids .= 'jQuery(document).ready(function(){ jQuery( ".mule-trailer, .entry" ).fitVids(); });';
+		$fitvids .= 'jQuery(document).ready(function(){jQuery(".mule-trailer,.entry").fitVids();});';
 		$fitvids .= '</script>';
 		echo $fitvids;
 
 		// Apply Fancybox.
 		$fancybox  = '<script>';
-		$fancybox .= 'jQuery(document).ready(function() {
-		jQuery("[data-fancybox]").fancybox({
-			padding     : 0,
-			openEffect  : "elastic",
-			closeEffect : "elastic",
-			type        : "iframe",
-			iframe:{
-			scrolling : "yes",
-			},
-		});
-		});';
-		$fancybox .= '<script>';
+		$fancybox .= 'jQuery(document).ready(function(){jQuery("[data-fancybox]").fancybox({padding:0,openEffect:"elastic",closeEffect:"elastic",type:"iframe",iframe:{scrolling:"yes",},});});';
+		$fancybox .= '</script>';
 		echo $fancybox;
 
 	}
